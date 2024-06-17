@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+            
+
+
+        </script>
+    </head>
+    <body>
+        <script>
+            let html;
+            $(document).ready(function(){
+                $.ajax({
+                    url:'https://networking-ecommerce-new.onrender.com/profile?id=1',
+                    success:function(data){
+                        html=data
+                        display_html()
+                    }
+                })
+            })
+            function display_html(){
+                $("body").append(html)
+                $(".col-md-4").remove()
+                $(".col-md-8").removeclass("col-md-8").addClass("col-md-12")
+            }
+        </script>
+    </body>
+    </html>
